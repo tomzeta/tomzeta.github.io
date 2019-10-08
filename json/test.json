@@ -1,0 +1,63 @@
+{
+    "origin": ["#city.capitalize#"],
+    "city": [
+        "#prefix#",
+        "#prefix# #suffix#"
+    ],
+    "prefix": [
+        "#cityM##adjM#", 
+        "#cityF##adjF#",
+        "#adjM##cityM#",
+        "#adjF##cityF#",
+        "#adjM##adjM#",
+        "#adjF##adjF#",
+        "#cityM#",
+        "#cityF#"
+    ],
+    "cityM":[
+        "borgo",
+        "ponte",
+        "vento",
+        "colle",
+        "monte",
+        "punto",
+        "rupe"
+    ],
+    "cityF":[
+        "citta",
+        "tempesta",
+        "pioggia",
+        "laguna",
+        "terra",
+        "punta"
+    ],
+    "adjF": [
+        "rossa", 
+        "nera", 
+        "vecchia",
+        "nuova",
+        "verde",
+        "brutta",
+        "ventosa",
+        "oscura",
+        "arida"
+    ],
+    "adjM": [
+        "rosso",
+        "nero",
+        "vecchio",
+        "nuovo",
+        "sporco",
+        "verde",
+        "oscuro",
+        "ventoso",
+        "arido"
+    ],
+    "suffix":[
+        "del Mar",
+        "del Sol",
+        "del Fuoco",
+        "del Tempo",
+        "del Tempio"
+    ]
+}
