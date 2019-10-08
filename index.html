@@ -1,84 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/perlin.js"></script>
+    <script src="js/mapGenerator.js"></script>
 
-  <!-- Script executed and "compiled" before html load-->
-  <script type="text/javascript" src="js/perlin.js"></script>
-  <script type="text/javascript" src="js/mapGenerator.js"></script>
-  <script type="text/javascript" src="js/pointOfInterest.js"></script>
-  
-
-
-  <!-- <script src="js/jquery-3.4.1.js"></script> -->
-  <title>Canvas Map</title>
+    
+    <title>Voronoi Test</title>
 </head>
-
 <body>
-  <h1 id="titleH1">Canvas Map</h1>
-  <div class="sliderText">
-      <label>Perlin noise modifier:</label>
-      <input id="sliderNoiseMod" type="range">
-      <span id="perlinNoiseModifierValue">Value</span>
-  </div>
-  <div class="sliderText">
-      <label >Octaves</label>
-      <input id="noiseOctavesSlider" type="range">
-      <span id="noiseOctavesValue">Value</span>
-  </div>
-  <div class="sliderText">
-      <label for="">Pow</label>
-      <input id="powSlider" type="range" >
-      <span id="powValue"></span>
-  </div>
-  <div class="sliderText">
-      <label for="">Amplitude</label>
-      <input id="amplitudeSlider" type="range" >
-      <span id="amplitudeValue"></span>
-  </div>
-  <div class="sliderText">
-    <label>Canvas Width:</label>
-    <input id="canvasWidthSlider" type="range">
-    <span id="canvasWidthLabel">Value</span>
-</div>
-<div class="sliderText">
-    <label>Canvas Height:</label>
-    <input id="canvasHeightSlider" type="range">
-    <span id="canvasHeightLabel">Value</span>
-</div>
-  
-  
-  
-
-  <button id="genHeightButton" class="btn btn-primary">Generate HeightMap</button>
-  <button id="tempMapButton" class="btn btn-primary">Generate Temperature Map</button>
-
-  <div>
-      <canvas id="heightCanvas" width="600" height="300"></canvas>
-  </div>
-  <div>
-      <canvas id="tempCanvas" width="600" height="300"></canvas>
-  </div>
-  
-  </div>
-  <!-- SCRIPTS -->
-
-  <script type="text/javascript" src="js/main.js"></script>
-  
-  
-
+    <h1>Voronoi MAP</h1>
+    <div>
+        <button id="removeBtn" class="">Remove Map</button>
+        <button id="genMap" class="">Generate Map</button>
+    </div>
+    <div id="svgWrapper"></div>
+    <div id="hoverComment">
+        <p>Selection: </p>
+        <p id="textToMod"></p>
+    </div>
+    <script src="js/d3Testing.js"></script>
 </body>
-
 </html>
