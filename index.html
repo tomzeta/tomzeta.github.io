@@ -7,21 +7,26 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="js/perlin.js"></script>
     <script src="js/mapGenerator.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     
     <title>Voronoi Test</title>
 </head>
 <body>
     <h1>Voronoi MAP</h1>
-    <div>
-        <button id="removeBtn" class="">Remove Map</button>
-        <button id="genMap" class="">Generate Map</button>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-secondary" id="genMap">Generate Map</button>
+        <button type="button" class="btn btn-secondary" id="removeBtn" class="">Remove Map</button>
     </div>
-    <div id="svgWrapper"></div>
-    <div id="hoverComment">
-        <p>Selection: </p>
-        <p id="textToMod"></p>
+    <div class="card">
+        <div id="container" class="svg-container"></div>
+        <div id="hoverComment">
+            <h5 class="card-title">Selection: </h5>
+            <p class="card-text" id="textToMod"></p>
+        </div>
     </div>
+    
     <script src="js/d3Testing.js"></script>
 </body>
 </html>

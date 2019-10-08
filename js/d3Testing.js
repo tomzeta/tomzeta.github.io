@@ -57,10 +57,14 @@ genPolygons();
 
 function genPolygons() {
     var svgContainer = d3
-        .select("#svgWrapper")
+        .select("#container")
         .append("svg")
-        .attr("width", svgWidth)
-        .attr("height", svgHeight);
+        
+        .attr("preserveAspectRation","xMinYMin meet")
+        .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
+        .classed("svg-content", true);
+        //.attr("width", svgWidth)
+        //.attr("height", svgHeight);
     svgContainer.append("rect")
         .attr("width", "100%")
         .attr("height", "100%")
@@ -94,7 +98,7 @@ function genPolygons() {
         });
     svgContainer.call(d3.zoom()
         .extent([[0,0],[svgWidth/2, svgHeight/2]])
-        .scaleExtent([1,4])
+        .scaleExtent([-4,4])
         .on("zoom", zoomed)
     );
     function zoomed(){
